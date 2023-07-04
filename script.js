@@ -40,15 +40,22 @@ function Relaunch( ){
     }
     if(turn){
         scoreRound1 += dice
-        document.getElementById('score-round').innerHTML=scoreRound1  
+        document.getElementById('score-round').innerHTML=scoreRound1 
+        score1= scoreRound1
+        document.getElementById('Total').innerHTML=score1
+         
     }
     else{
         scoreRound2 += dice
         document.getElementById('score-round2').innerHTML=scoreRound2 
+        // score2= scoreRound2
+        // document.getElementById('Total2').innerHTML=score2 
     }
   
 }
 
 function Total (){
-    
+    if(turn){
+
+    }
 }
