@@ -56,6 +56,6 @@ function Relaunch( ){
 
 function Total (){
     if(turn){
-
+x
     }
 }
