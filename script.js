@@ -55,10 +55,10 @@ function Total (){
     score2= scoreRound2
     document.getElementById('Total2').innerHTML=score2 
     changeTurn()
-    if(score1 >= 2){
+    if(score1 >= 20){
         alert("Player1 win!")
     }
-    if(score2 >= 2){
+    if(score2 >= 20){
         alert("Player2 win!")
     }
 }
