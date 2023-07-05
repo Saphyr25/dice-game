@@ -40,22 +40,26 @@ function Relaunch( ){
     }
     if(turn){
         scoreRound1 += dice
-        document.getElementById('score-round').innerHTML=scoreRound1 
-        score1= scoreRound1
-        document.getElementById('Total').innerHTML=score1
-         
+        document.getElementById('score-round').innerHTML=scoreRound1          
     }
     else{
         scoreRound2 += dice
         document.getElementById('score-round2').innerHTML=scoreRound2 
-        // score2= scoreRound2
-        // document.getElementById('Total2').innerHTML=score2 
     }
   
 }
 
 function Total (){
-    if(turn){
-
+    score1= scoreRound1
+    document.getElementById('Total').innerHTML=score1
+    score2= scoreRound2
+    document.getElementById('Total2').innerHTML=score2 
+    changeTurn()
+    if(score1 >= 2){
+        alert("Player1 win!")
+    }
+    if(score2 >= 2){
+        alert("Player2 win!")
     }
 }
+
