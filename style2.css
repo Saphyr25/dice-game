@@ -7,10 +7,16 @@ body {
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 1%, rgba(127,130,255,1) 35%, rgba(0,212,255,1) 100%); 
     font-family: cursive;
     font-size:xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.content{
+    text-align: center;
+}
 .choices {
     display: flex;
+    gap: 20px;
 }
 
 .choices img {
