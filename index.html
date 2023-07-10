@@ -7,12 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
 </head>
 
 <body>
-    <!-- <div id="menu" class="game_menu">
+    <div id="menu" class="game_menu">
        <div class="icons"> <iconify-icon icon="fluent:speaker-off-20-filled" width="40" height="40"></iconify-icon></div>
-        <iconify-icon icon="fluent:speaker-2-20-filled" width="20" height="20"></iconify-icon>
         <div class="game_menu_title">
             <h1>Entrez vos noms de joueurs</h1>
         </div>
@@ -28,39 +28,34 @@
                 <button id="button2" class="login_button"> Valider</button>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- ----------------------------------------------- -->
 
     <div id="dice_game">
         <div class="dice_game_content">
             <div class="players_content">
-            <div class="Player1">
-                <p id="Player1">Player 1: </p>
-                <span id="Total">0</span>
-                <span id="score-round">0</span>
-                <button onclick="Total()" class="Hold disabled">Hold </button>
-                <button onclick="Relaunch()" class="relancé disabled">relancé</button>
-
-            </div>
-
-            <br>
-
-            <div class="Player2">
-                <p id="Player2">Player 2:</p>
-                <span id="Total2">0</span>
-                <span id="score-round2">0</span>
-                <button onclick="Total()" class="Hold disabled2" disabled>Hold</button>
-                <button onclick="Relaunch()" class="relancé disabled2" disabled>relancé</button>
+                <div id="P1"  class="Player1">
+                    <p id="Player1">Player 1: </p>
+                    <span id="Total">0</span>
+                    <span id="score-round">0</span>
+                    <button onclick="Total()" class="Hold disabled">Hold </button>
+                    <button onclick="Relaunch()" class="relancé disabled">Relancer</button>
+                </div>
+                <div id="dice_picture">
+                    <img id="dice_img" src="images/dice-1.png" alt="">
+                </div>
+                <div id="P2" class="Player2">
+                    <div class="player_content_bg"></div>
+                    <p id="Player2">Player 2:</p>
+                    <span id="Total2">0</span>
+                    <span id="score-round2">0</span>
+                    <button onclick="Total()" class="Hold disabled2" disabled>Hold</button>
+                    <button onclick="Relaunch()" class="relancé disabled2" disabled>Relancer</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
     <script src="script.js"></script>
 </body>
 

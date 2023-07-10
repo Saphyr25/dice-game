@@ -7,12 +7,14 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+
 }
 
 .game_menu {
     height: 100%;
     width: 100%;
-    background: #a5d8ff;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 1%, rgba(127,130,255,1) 35%, rgba(0,212,255,1) 100%); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,24 +78,65 @@ body {
 /* --------------------------------------------------------------- */
 
 #dice_game{
-    display: ;
-    height: 100%;
+    display: none ;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 1%, rgba(127,130,255,1) 35%, rgba(0,212,255,1) 100%);  
 }
 .dice_game_content{
-    display: flex;
-    flex-direction: column;
-    font-family: cursive;;
-}
-.players_content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly ;
-    align-items: start;
-
-}
-.Player1 , .Player2{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 7vh;
+    justify-content: center;
+    font-family: cursive;
+}
+.players_content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    align-items: center;
+
+}
+
+.Player1 , .Player2{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-items: center;
+    font-size: 8vw;
+    opacity: 1.0;
+    background-color: rgba(201, 255, 255, 0.3);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#dice_game button{
+    width:80px;
+    padding:10px 0;
+    margin-top:5px ;
+    border: none;
+    border-radius: 20px;
+}
+.dice_picture img{
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 150px;
+}
+
+@media screen and (max-width: 800px) {
+    .players_content{
+        flex-direction: column;
+        gap: 40px
+    }
+     img{
+        width: 70px;
+    }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <h1>Nous Contacter</h1>
+  <div class="container">
+    <form onsubmit="return validerFormulaire()">
+      <div class="form-row">
+        <label class="form-label" for="nom">Nom:</label>
+        <input class="form-input" type="text" id="nom" name="nom" >
+      </div>
+  
+      <div class="form-row">
+        <label class="form-label" for="email">Email:</label>
+        <input class="form-input" type="text" id="email" name="email" >
+      </div>
+  
+      <div class="form-row">
+        <label class="form-label" for="sujet">Sujet:</label>
+        <input class="form-input" type="text" id="sujet" name="sujet" >
+      </div>
+  
+      <div class="form-row">
+        <label class="form-label" for="message">Message:</label>
+        <textarea class="form-textarea" id="message" name="message" rows="4"  ></textarea>
+      </div>
+  
+      <button type="submit" value="Envoyer">Envoyer mon message</button>
+    </form>
+
+    <div class="navbar">
+      <div class="navbar_component navbar_home">
+          <a href="accueil.html">
+              <img class="navbar_img_elem" src="images/home_icon.png" width="30" alt="home_icon">
+          </a>
+      </div>
+      <div class="navbar_component navbar_games">
+          <a href="index.html">
+              <img class="navbar_img_elem" src="images/play_icon.png" width="30" alt="games_icon">
+          </a>
+      </div>
+      <div class="navbar_component navbar_contact">
+          <a href="contact.html">
+              <img class="navbar_img_elem" src="images/contact_icon.png" width="30" alt="contact_icon">
+          </a>
+      </div>
+  </div>
+</div>
+</div>
+
+    <div class="footer">
+        <p>© 2023 Riyad Habchi</p>
+        <p>riyadhacbi@qzfzd.codz</p>
+        <a href="contact.html"><p class="footer_contact">Contactez-nous</p></a>
+    </div>
+</body>
+</html>

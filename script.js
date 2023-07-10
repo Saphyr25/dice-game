@@ -6,6 +6,8 @@ let score2 = 0
 let scoreRound1 = 0
 let scoreRound2 = 0
 
+let player1Name = ""
+let player2Name = ""
 
 function enableButtons(name, visibility) {
     let elements = document.getElementsByClassName(name)
@@ -33,9 +35,8 @@ function changeTurn() {
 
 function Relaunch() {
     const dice = Math.floor(Math.random() * (6) + 1);
-    console.log(dice)
+    document.getElementById("dice_img").src = `images/dice-${dice}.png`
     if (dice === 1) {
-
         changeTurn()
         return
     }
@@ -51,17 +52,20 @@ function Relaunch() {
 }
 
 function Total() {
-    score1 = scoreRound1
+    score1 += scoreRound1
     document.getElementById('Total').innerHTML = score1
-    score2 = scoreRound2
+    score2 += scoreRound2
     document.getElementById('Total2').innerHTML = score2
     changeTurn()
-    if (score1 >= 20) {
-        alert("Player1 win!")
+        if (score1 >= 10) {
+        alert(`${player1Name} win!`)
+        window.location.assign('accueil.html')
     }
-    if (score2 >= 20) {
-        alert("Player2 win!")
+    if (score2 >= 10) {
+        alert(`${player2Name} win!`)
+        window.location.assign('accueil.html')
     }
+
 }
 let valider1 = false
 let valider2 = false
@@ -72,7 +76,7 @@ document.getElementById('button1').onclick = function (e) {
         let game_menu = document.getElementById('menu')
         game_menu.style.display = "none"
         let jeu = document.getElementById("dice_game")
-        jeu.style.display = "block"
+        jeu.style.display = "flex"
 
         let input_name = document.getElementById('input1').value
         let Player1 = document.getElementById('Player1')
@@ -80,6 +84,7 @@ document.getElementById('button1').onclick = function (e) {
             Player1.textContent = 'Player1';
         else
             Player1.textContent = input_name;
+        player1Name = Player1.textContent;
 
         let input_name2 = document.getElementById('input2').value
         console.log(input_name2)
@@ -88,6 +93,7 @@ document.getElementById('button1').onclick = function (e) {
             Player2.textContent = 'Player2';
         else
             Player2.textContent = input_name2;
+        player2Name = Player2.textContent;
     }
 
 }
@@ -99,13 +105,14 @@ document.getElementById('button2').onclick = function (e) {
         let game_menu = document.getElementById('menu')
         game_menu.style.display = "none"
         let jeu = document.getElementById("dice_game")
-        jeu.style.display = "block"
+        jeu.style.display = "flex"
         let input_name = document.getElementById('input1').value
         let Player1 = document.getElementById('Player1')
         if (input_name === '')
             Player1.textContent = 'Player1';
         else
             Player1.textContent = input_name;
+         player1Name = Player1.textContent
 
         let input_name2 = document.getElementById('input2').value
         let Player2 = document.getElementById('Player2')
@@ -113,9 +120,8 @@ document.getElementById('button2').onclick = function (e) {
             Player2.textContent = 'Player2';
         else
             Player2.textContent = input_name2;
+        player2Name = Player2.textContent
     }
 
 }
-
-
 
