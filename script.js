@@ -1,11 +1,12 @@
+// initialisation de la var qui décidera du tour du joueur ( si turn= true, tour du joueur1 et cetera )
 let turn = true
-
+// initialisation de la var score total
 let score1 = 0
 let score2 = 0
-
+// var score du round 
 let scoreRound1 = 0
 let scoreRound2 = 0
-
+//
 let player1Name = ""
 let player2Name = ""
 
@@ -77,6 +78,8 @@ document.getElementById('button1').onclick = function (e) {
         game_menu.style.display = "none"
         let jeu = document.getElementById("dice_game")
         jeu.style.display = "flex"
+
+
 
         let input_name = document.getElementById('input1').value
         let Player1 = document.getElementById('Player1')

@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 1%, rgba(127,130,255,1) 35%, rgba(0,212,255,1) 100%); 
+    font-family: cursive;
+    font-size:xx-large;
+}
+
+.choices {
+    display: flex;
+}
+
+.choices img {
+    width: 100px;
+}
+
+.rock_container, .paper_container, .scissor_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
