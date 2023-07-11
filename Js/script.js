@@ -6,17 +6,17 @@ let score2 = 0
 // var score du round 
 let scoreRound1 = 0
 let scoreRound2 = 0
-//
+//variable qui va contenir/enregistrer les peseudo des joueurs
 let player1Name = ""
 let player2Name = ""
-
+// function generique qui va activer ou désactiver les boutons des joueurs
 function enableButtons(name, visibility) {
     let elements = document.getElementsByClassName(name)
     for (let i = 0; i < elements.length; i++) {
         elements[i].disabled = visibility
     }
 }
-
+// fonction générique qui va permettre l'activation/désactivation des boutons donc le changement de tour
 function changeTurn() {
     if (turn) {
         turn = false
@@ -58,11 +58,11 @@ function Total() {
     score2 += scoreRound2
     document.getElementById('Total2').innerHTML = score2
     changeTurn()
-        if (score1 >= 10) {
+        if (score1 >= 5) {
         alert(`${player1Name} win!`)
         window.location.assign('accueil.html')
     }
-    if (score2 >= 10) {
+    if (score2 >= 5) {
         alert(`${player2Name} win!`)
         window.location.assign('accueil.html')
     }
@@ -78,7 +78,6 @@ document.getElementById('button1').onclick = function (e) {
         game_menu.style.display = "none"
         let jeu = document.getElementById("dice_game")
         jeu.style.display = "flex"
-
 
 
         let input_name = document.getElementById('input1').value
@@ -109,6 +108,8 @@ document.getElementById('button2').onclick = function (e) {
         game_menu.style.display = "none"
         let jeu = document.getElementById("dice_game")
         jeu.style.display = "flex"
+
+
         let input_name = document.getElementById('input1').value
         let Player1 = document.getElementById('Player1')
         if (input_name === '')
