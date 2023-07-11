@@ -60,6 +60,7 @@ if(parseInt(document.getElementById('total2').textContent )===5){
 }
 }
 
+
 function botchoice() {
     return Math.floor(Math.random() * 3);
 }
